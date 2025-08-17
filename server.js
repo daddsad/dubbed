@@ -33,7 +33,7 @@ app.post("/dub", async (req, res) => {
 
                 fs.unlinkSync(tempAudioPath); // Limpiar temporal
 
-                res.json({ audioUrl: `http://localhost:5000/dubbed/${outputFileName}` });
+                res.json({ audioUrl: `https://dubbed.onrender.com/dubbed/${outputFileName}` });
             } catch (err) {
                 console.error(err);
                 res.status(500).json({ error: "Error generando doblaje" });
